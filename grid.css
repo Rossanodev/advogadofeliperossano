@@ -1,0 +1,305 @@
+body{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #ecf0f1;  
+    font-family: 'Lora', sans-serif;
+    background-attachment: fixed;
+    background-position: center;
+    -o-background-size: cover;
+}
+
+a:link, a:active, a:visited{
+    color:#DDDDDF;
+    text-decoration: nome;
+}
+  
+a:hover{
+    text-decoration: underline;
+}
+
+/* Grid  */
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15vh 70vh 50vh;
+    grid-template-areas: "h h"
+                        "m m"
+                        "s s"
+                        "f f";
+}
+
+.header{
+    grid-area: h;
+    text-align: center;
+    background: #010807;
+    color: rgb(90, 58, 58);
+}
+
+.main {
+    grid-area: m;
+    align-items: center;
+    background: url(./intro.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    padding: 10px;
+    box-shadow: #888888 0 0 2px 0;
+    align-items: center;
+
+}
+
+.section{
+    grid-area: s;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.section > div{
+    background: #dee3e6;
+}
+
+.footer{
+    grid-area: f;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer > div {
+    background: #2D3740;
+    color:rgb(51, 1, 1);
+    padding: 5px 0;
+    font-weight: 500;
+    overflow: hidden;  
+}
+ 
+.footer > div:last-child(odd){
+    text-align: center;
+    justify-items: left;
+}
+
+
+
+.logo {
+    font-weight: 700pt;
+    color: white;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+}
+
+.logo-wrapper {
+    width: 30%;
+    text-align: center;
+    display: inline-block;
+    align-items: stretch;
+}
+
+.menu{
+    text-transform: uppercase;
+    margin-top: 25px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.menu li {
+    display: inline-block;
+    padding: 15px;
+}
+
+.menu li a:hover{
+    text-decoration: none;
+    background: orange;
+    color:#ebebeb;
+    display: inline-block;
+}
+
+.desktop {
+    display: inline-block;
+}
+
+.mobile {
+    display: none;
+    color:#DDDDDF;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+  
+.mobile div {
+    border: 2px #DDDDDF solid;
+    border-bottom: 0;
+    border-right: 0;
+    border-left: 0;
+    height: 25px;
+}
+  
+.mobile div:last-child {
+    border-bottom: 2px #DDDDDF solid;
+}
+  
+.mobile-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.mobile-menu-item {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.categoria {
+    width: 60px;
+    height: 60px;
+    background: #5585b4;
+    display: right;
+    margin: 5px;
+    border-radius: 10px;
+    border: 5px solid  #315e8a;
+    color:#DDDDDF;
+    font-weight: bold;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10%;
+}
+
+
+/* a partir daqui começa estilização */
+  
+.contato label{
+    display: block;
+    font-size: 13px;
+    font-weight: 300;
+}
+  
+.contato input, .contato textarea{
+    display: block;
+    margin-bottom: 15px;
+    padding: 5px 2%;
+    width: 96%;
+}
+  
+.contato textarea{
+    height: 150px;
+}
+  
+.contato input.botao{
+    width: auto;
+}
+
+
+@media(max-width: 640px) {
+    h1.logo {
+      font-size: 25px;
+    }
+    .desktop {
+      display: none;
+    }
+    .mobile {
+      display: block;
+    }
+    .logo-wrapper {
+      width: 100%;
+    }
+    .apresentacao {
+      height: 300px;
+    }
+   .footer {
+      text-align: center;
+    }
+    .linha {
+      width: 100%;
+    }
+
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway';
+    margin: 15px 0 10px 0;
+}
+  
+ul li, ol li{
+    margin-bottom: 5px;
+}
+  
+ul.inline li, ol inline li{
+    display: inline;
+    margin-right: 15px;
+}   
+  
+ul.inline li:last-child, ol inline li:last-child{
+    margin-right: 0;
+}   
+  
+ul.sem-marcador, ol.sem-marcador{
+    list-style: none;
+}
+  
+a.botao, input.botao{
+    background: orange;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    margin: 5px 0;
+    display: inline-block;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+  
+a:visited {
+    text-decoration: underline;
+}
+   
+a.botao:hover, input.botao:hover{
+    background: #000408;
+    text-decoration: none;
+}
+  
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* layout do site */
+  
+  
+.conteudo-extra{
+    background: #f1f2ea;
+}
+  
+ 
+.contato label{
+    display: block;
+    font-size: 13px;
+    font-weight: 300;
+}
+  
+.contato input, .contato textarea{
+    display: block;
+    margin-bottom: 15px;
+    padding: 5px 2%;
+    width: 96%;
+}
+  
+.contato textarea{
+    height: 150px;
+}
+  
+
+.contato input.botao{
+    width: auto;
+}
+  
+  
+  
